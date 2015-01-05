@@ -1,13 +1,16 @@
 <head>
-  <title>arc-wid-test3.meteor.com</title>
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
+  	<title>arc-wid-test3.meteor.com</title>
+  	<link rel="stylesheet" href="arc-wid-test3.meteor.com.css">
+  	<link rel="stylesheet" href="http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans"></link>
+  	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
 </head>
 
 <body>
+  
   <h1>ARC data visualization demo app</h1>
-
   {{> hello}}
+  <div class="maincontent">
   <p>This is an app that was created and deployed during the ARC Education and Communication subcommittee conference call on Jan. 5, 2014. The purpose was to show how to create a local testing environment that could be used for simple data visualization training sessions provided by the <a href="http://www.workforceinfodb.com">Analyst Resource Center. </a>These training sessions will have the goal of increasing the public's awareness of, and access to, data contained in the Workforce Information Database. You can see the live version at <a href="http://arc-wid-test3.meteor.com">http://arc-wid-test3.meteor.com</a>. Future iterations of this will include WID data, and will use charts that pull data from a separate file (tsv or csv) or connect to a database.</p>
   <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora maxime veritatis aspernatur animi recusandae alias, quibusdam repellendus, voluptates quae obcaecati quisquam! Quia repellat provident modi. Deleniti modi, asperiores numquam dolor.</p>
@@ -179,6 +182,7 @@
 });
 
 </script>
+</div>
 </body>
 
 <template name="hello">
