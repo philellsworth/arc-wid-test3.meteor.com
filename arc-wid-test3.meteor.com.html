@@ -40,19 +40,11 @@
   {{> hello}} <!-- pointless button -->
   <p>This is an app that was created and deployed during the ARC Education and Communication subcommittee conference call on Jan. 5, 2014. The purpose was to show how to create a local testing environment that could be used for simple data visualization training sessions provided by the <a href="http://www.workforceinfodb.com">Analyst Resource Center. </a>These training sessions will have the goal of increasing the public's awareness of, and access to, data contained in the Workforce Information Database. You can see the live version at <a href="http://arc-wid-test3.meteor.com">http://arc-wid-test3.meteor.com</a>. Future iterations of this will include WID data, and will use charts that pull data from a separate file (tsv or csv) or connect to a database.<br>
     <a class="btn btn-primary btn-lg" href="http://www.workforceinfodb.org" role="button">Learn more</a></p>
-  <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+  <div id="container1" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div> <!-- first chart -->
       <p>This app was built with <a href="http://www.meteor.com">Meteor</a>. If you're using Windows or would like to try out Meteor without installing anything, check out <a href="http://www.nitrous.io">Nitrous.io</a>, which allows you to create, modify, and deploy a variety of apps for free. If you're interested in being added as a collaborator on this app, let me know!</p>
-  <div class="row">
-    
-    <p class="text-center"><a href="#myModal" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Us</a></p>
-    
-  </div>
-        
-        <p><a class="btn btn-primary btn-lg" href="http://www.workforceinfodb.org" role="button">Learn more</a></p>
   
-    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div> <!-- first chart -->
-    
-      <p>This app was built with <a href="http://www.meteor.com">Meteor</a>. If you're using Windows or would like to try out Meteor without installing anything, check out <a href="http://www.nitrous.io">Nitrous.io</a>, which allows you to create, modify, and deploy a variety of apps for free. If you're interested in being added as a collaborator on this app, let me know!</p>
+        
+        
             
       <!-- button and modal (form) start here -->
   <div class="row">
@@ -141,7 +133,7 @@
     
     <script>
     $(function () {
-    $('#container').highcharts({
+    $('#container1').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: 1,//null,
