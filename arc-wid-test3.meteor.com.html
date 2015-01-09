@@ -1,0 +1,308 @@
+<head>
+  	<title>arc-wid-test3.meteor.com</title>
+  	<link rel="stylesheet" href="arc-wid-test3.meteor.com.css">
+  	<link rel="stylesheet" href="http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+</head>
+
+<body>
+ <div class="container">
+  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">ARC WID DEMO</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Home</a></li>
+		          <li><a href="setup-notes.html">foo</a></li>
+              <li><a href="navbar-examples.html">bar</a></li>              
+		        </ul>
+		        	<a class="btn btn-primary pull-right" href="http://www.workforceinfodb.org">ARC Home</a>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+      </div><!--/.navbar-inner -->
+    </div><!--/.navbar navbar-fixed-top -->
+  </div><!-- /.container -->
+  
+  
+  <div class="container">
+  <div class="jumbotron bg-default">
+    <h1>&nbsp;</h1>
+        <h1>ARC data visualization demo app</h1>
+      
+  {{> hello}} <!-- pointless button -->
+  
+      <p>This is a new app that was created and deployed during the ARC Education and Communication subcommittee conference call on Jan. 5, 2014. The purpose was to show how to create a local testing environment that could be used for simple data visualization training sessions provided by the <a href="http://www.workforceinfodb.com">Analyst Resource Center. </a>These training sessions will have the goal of increasing the public's awareness of, and access to, data contained in the Workforce Information Database. You can see the live version at <a href="http://arc-wid-test3.meteor.com">http://arc-wid-test3.meteor.com</a>. Future iterations of this will include WID data, and will use charts that pull data from a separate file (tsv or csv) or connect to a database.<br> 
+        
+        <a class="btn btn-primary btn-lg" href="http://www.workforceinfodb.org" role="button">Learn more</a></p>
+  
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div> <!-- first chart -->
+    
+      <p>This app was built with <a href="http://www.meteor.com">Meteor</a>. If you're using Windows or would like to try out Meteor without installing anything, check out <a href="http://www.nitrous.io">Nitrous.io</a>, which allows you to create, modify, and deploy a variety of apps for free. If you're interested in being added as a collaborator on this app, let me know!</p>
+            
+      <!-- button and modal (form) start here -->
+  <div class="row">
+    <p class="text-center"><a href="#myModal" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Us</a></p>
+    <center><p>Note: E-mail functionality still under construction</p></center>
+  </div> <!-- end row -->
+          
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">We'd Love to Hear From You</h3>
+          </div> <!-- end modal header -->
+          
+          <div class="modal-body">
+            <form class="form-horizontal col-sm-12">
+              
+              <div class="form-group">
+                <label>Name</label>
+                <input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text">
+             </div> <!-- end form group for Name -->
+              
+              <div class="form-group">
+                <label>Message</label>
+                <textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea>                 
+              </div> <!-- end form group for Message -->
+              
+              <div class="form-group">
+                <label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text">
+              </div> <!-- end form group for E-Mail -->
+              
+              <div class="form-group">
+                <label>Phone</label><input class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text">
+              </div> <!-- end form group for Phone -->
+              
+              <div class="form-group">
+                <button type="submit" class="btn btn-success pull-right">Send It!</button> 
+                <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p>
+              </div> <!-- end form group for submit button -->
+              
+          </form>
+            
+        </div> <!-- end modal-body -->
+          
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        </div> <!-- end modal-footer -->
+          
+    </div>
+  </div>
+</div>
+  
+    <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+  
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus impedit eius debitis at voluptate nisi adipisci vel. Ipsam molestias, iure esse architecto suscipit libero vero amet qui, in minima et.</p>
+  
+    <div id="container3" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+  
+    <p>Nam quaerat, dignissimos explicabo voluptates doloribus ab, et amet eius error tempora atque perferendis, aut eos natus alias fuga cumque nemo harum!</p>
+    
+    
+      <div id="chartContainer">
+        <script src="/lib/d3.v3.4.8.js"></script>
+        <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+        <script type="text/javascript">
+            var svg = dimple.newSvg("#chartContainer", 590, 400);
+            d3.tsv("/data/example_data.tsv", function (data) {
+             var myChart = new dimple.chart(svg, data);
+              myChart.setBounds(20, 20, 460, 360)
+              myChart.addMeasureAxis("p", "Unit Sales");
+              myChart.addSeries("Owner", dimple.plot.pie);
+              myChart.addLegend(500, 20, 90, 300, "left");
+              myChart.draw();
+            });
+        </script>
+      </div> <!-- end chartContainer -->
+    
+    
+  <p>Sunt odio autem dignissimos culpa, eligendi sed maiores molestias consequuntur, provident quo nobis, error? Tenetur asperiores, amet quod suscipit esse eaque delectus.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, consequatur? Nemo sapiente excepturi, eligendi eveniet necessitatibus quia velit est commodi ratione voluptate voluptatibus, earum at consequatur pariatur optio voluptates, tempora.</p>
+  <p>Facilis totam quisquam unde debitis nostrum, dolor, id fuga, qui veniam incidunt quae nihil explicabo sequi blanditiis. Nisi, hic expedita quos corporis?</p>
+  <!-- end text section -->
+  
+    
+    <script>
+    $(function () {
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Browser market shares at a specific website, 2014'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['Firefox',   45.0],
+                ['IE',       26.8],
+                {
+                    name: 'Chrome',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                },
+                ['Safari',    8.5],
+                ['Opera',     6.2],
+                ['Others',   0.7]
+            ]
+        }]
+    });
+});
+
+</script>
+<script>$(function () {
+    $('#container2').highcharts({
+        title: {
+            text: 'Monthly Average Temperature',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature (°C)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+            name: 'New York',
+            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+        }, {
+            name: 'Berlin',
+            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+        }, {
+            name: 'London',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }]
+    });
+});</script>
+<script>$(function () {
+    $('#container3').highcharts({
+        title: {
+            text: 'Combination chart'
+        },
+        xAxis: {
+            categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+        },
+        labels: {
+            items: [{
+                html: 'Total fruit consumption',
+                style: {
+                    left: '50px',
+                    top: '18px',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                }
+            }]
+        },
+        series: [{
+            type: 'column',
+            name: 'Jane',
+            data: [3, 2, 1, 3, 4]
+        }, {
+            type: 'column',
+            name: 'John',
+            data: [2, 3, 5, 7, 6]
+        }, {
+            type: 'column',
+            name: 'Joe',
+            data: [4, 3, 3, 9, 0]
+        }, {
+            type: 'spline',
+            name: 'Average',
+            data: [3, 2.67, 3, 6.33, 3.33],
+            marker: {
+                lineWidth: 2,
+                lineColor: Highcharts.getOptions().colors[3],
+                fillColor: 'white'
+            }
+        }, {
+            type: 'pie',
+            name: 'Total consumption',
+            data: [{
+                name: 'Jane',
+                y: 13,
+                color: Highcharts.getOptions().colors[0] // Jane's color
+            }, {
+                name: 'John',
+                y: 23,
+                color: Highcharts.getOptions().colors[1] // John's color
+            }, {
+                name: 'Joe',
+                y: 19,
+                color: Highcharts.getOptions().colors[2] // Joe's color
+            }],
+            center: [100, 80],
+            size: 100,
+            showInLegend: false,
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+});
+
+    </script>
+      
+    </div>  <!-- end jumbotron -->
+</div> <!-- end container -->
+  
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the pointless button {{counter}} times.</p>
+
+  
+</template>
