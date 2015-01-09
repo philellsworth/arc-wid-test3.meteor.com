@@ -1,1 +1,15 @@
 /* CSS declarations go here */
+<<<<<<< HEAD
+=======
+body {
+		font-family: "Open Sans", sans-serif;
+		padding:0px 50px;
+}
+h1.big {
+	font-size: 4em;
+}
+.maincontent {
+	padding: 50px 0px;
+	font-size: 1.1em;
+}
+>>>>>>> 08d6ee4441168e197275409e6070be0ddb844d6d
