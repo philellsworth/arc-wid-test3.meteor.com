@@ -3,11 +3,7 @@
 #
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
-
 meteor-platform
 autopublish
 insecure
-<<<<<<< HEAD
 bootstrap
-=======
->>>>>>> 08d6ee4441168e197275409e6070be0ddb844d6d

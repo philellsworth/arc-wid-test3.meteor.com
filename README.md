@@ -5,7 +5,6 @@ The purpose was to show how to create a local testing environment that could be 
 You can see the live version at http://arc-wid-test3.meteor.com
 Future iterations of this will include WID data, and will use charts that pull data from a separate file (tsv or csv) or connect to a database.
 
-<<<<<<< HEAD
+
 =======
 [![Hack philellsworth/arc-wid-test3.meteor.com on Nitrous](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-s-v1-0616054bfad452919522f1d08ad1fddf.png)](https://www.nitrous.io/hack_button?source=embed&runtime=meteor&repo=philellsworth%2Farc-wid-test3.meteor.com)
->>>>>>> 08d6ee4441168e197275409e6070be0ddb844d6d
