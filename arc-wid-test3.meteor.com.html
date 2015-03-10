@@ -6,6 +6,7 @@
   	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
   <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
 </head>
 
 <body>
@@ -101,6 +102,9 @@
 </div>
   
     <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+    <p>Another paragraph here</p>
+    <h2>Baker Hughes Rig Count</h2>
+    <div id="ex0"></div>
   
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus impedit eius debitis at voluptate nisi adipisci vel. Ipsam molestias, iure esse architecto suscipit libero vero amet qui, in minima et.</p>
   
@@ -297,6 +301,63 @@
 });
 
 
+    </script>
+    
+    <script>$(function () {
+               google.load('visualization', '1', {packages: ['corechart']});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Month');
+      data.addColumn('number', 'Rigs');
+
+      data.addRows([
+  ["JAN",48],
+  ["FEB",46],
+  ["MAR",44],
+  ["APR",42],
+  ["MAY",43],
+  ["JUN",47],
+  ["JUL",52],
+  ["AUG",51],
+  ["SEP",50],
+  ["OCT",49],
+  ["NOV",56],
+  ["DEC 13",55],
+  ["JAN",53],
+  ["FEB",52],
+  ["MAR",52],
+  ["APR",49],
+  ["MAY",46],
+  ["JUN",50],
+  ["JUL",52],
+  ["AUG",53],
+  ["SEP",58],
+  ["OCT",61],
+  ["NOV",61],
+  ["DEC 14",58]
+]);
+
+      var options = {
+        width: 1000,
+        height: 563,
+        hAxis: {
+          title: 'Month'
+        },
+        vAxis: {
+          title: 'Rigs'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(
+        document.getElementById('ex0'));
+
+      chart.draw(data, options);
+
+    }
+};
     </script>
       
     </div>  <!-- end jumbotron -->
